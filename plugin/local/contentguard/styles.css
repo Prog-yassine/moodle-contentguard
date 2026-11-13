@@ -1,0 +1,362 @@
+.contentguard-protected {
+    isolation: isolate;
+}
+.contentguard-no-select {
+    -webkit-user-select: none;
+    user-select: none;
+}
+.contentguard-no-select :is(input, textarea, select, button, a, [contenteditable]:not([contenteditable="false"]), [role="textbox"]) {
+    -webkit-user-select: text;
+    user-select: text;
+}
+.contentguard-watermark {
+    position: absolute;
+    inset: 0;
+    z-index: 4;
+    pointer-events: none;
+    user-select: none;
+    background-repeat: repeat;
+    border-radius: inherit;
+}
+.contentguard-ai-question {
+    position: relative;
+}
+.contentguard-ai-label {
+    position: relative;
+    padding: 10px 12px;
+    margin-bottom: 16px;
+    border: 1px solid #d6b56e;
+    border-radius: 6px;
+    background: #fff7e5;
+    color: #594219;
+    font-size: 12px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+.contentguard-ai-label strong,
+.contentguard-ai-label span {
+    display: block;
+}
+.contentguard-ai-label strong {
+    margin-bottom: 4px;
+    letter-spacing: .025em;
+}
+.contentguard-ai-watermark {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    pointer-events: none;
+    user-select: none;
+    background-repeat: repeat;
+    opacity: .22;
+    border-radius: inherit;
+}
+.contentguard-notice {
+    position: fixed;
+    left: 50%;
+    bottom: 28px;
+    transform: translateX(-50%);
+    z-index: 1100;
+    max-width: min(90vw, 560px);
+    padding: 15px 22px;
+    border-radius: 12px;
+    color: #fff;
+    background: #172b45;
+    box-shadow: 0 12px 32px #172b4530;
+    font-size: 14px;
+}
+.contentguard-lab {
+    --cg-ink: #172b45;
+    --cg-muted: #63758b;
+    --cg-line: #e4eaf1;
+    --cg-accent: #326ce5;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 8px 0 26px;
+    color: var(--cg-ink);
+}
+.contentguard-lab .cg-eyebrow {
+    color: var(--cg-accent);
+    font-size: 12px;
+    font-weight: 750;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+.contentguard-lab .cg-hero {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    margin: 8px 0 30px;
+}
+.contentguard-lab h1.cg-title {
+    font-size: clamp(30px, 3.5vw, 44px);
+    line-height: 1.12;
+    letter-spacing: -.04em;
+    font-weight: 750;
+    margin: 0 0 14px;
+    max-width: 680px;
+    color: var(--cg-ink);
+}
+.contentguard-lab .cg-intro {
+    max-width: 680px;
+    color: var(--cg-muted);
+    line-height: 1.7;
+    margin: 0;
+}
+.contentguard-lab .cg-badge {
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 99px;
+    padding: 9px 13px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #23604d;
+    background: #eaf7f0;
+    border: 1px solid #d1ecdf;
+}
+.contentguard-lab .cg-badge::before {
+    content: '';
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    background: #2e9b70;
+}
+.contentguard-lab .cg-badge.cg-off {
+    color: #6c5f39;
+    background: #fff8e8;
+    border-color: #f2e6c8;
+}
+.contentguard-lab .cg-badge.cg-off::before {
+    background: #ac8a33;
+}
+.contentguard-lab .cg-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(260px, 1fr);
+    gap: 24px;
+    align-items: start;
+}
+.contentguard-lab .cg-card {
+    border: 1px solid var(--cg-line);
+    border-radius: 18px;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 5px 20px #172b4505;
+}
+.contentguard-lab .cg-card-header {
+    padding: 18px 24px;
+    border-bottom: 1px solid var(--cg-line);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 13px;
+    font-weight: 650;
+}
+.contentguard-lab .cg-subtle {
+    color: var(--cg-muted);
+    font-size: 12px;
+    font-weight: 400;
+}
+.contentguard-lab .cg-reading {
+    padding: 30px;
+    min-height: 490px;
+}
+.contentguard-lab .cg-art {
+    height: 150px;
+    border-radius: 12px;
+    margin-bottom: 26px;
+    background: #eaf0ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.contentguard-lab .cg-art::before {
+    content: '';
+    width: 220px;
+    height: 220px;
+    position: absolute;
+    border: 32px solid #c5d4fc;
+    border-radius: 50%;
+    right: 28px;
+    top: -64px;
+}
+.contentguard-lab .cg-art::after {
+    content: '';
+    width: 110px;
+    height: 110px;
+    background: #92adf6;
+    border-radius: 24px;
+    transform: rotate(-22deg);
+    position: absolute;
+    left: 70px;
+    bottom: -35px;
+}
+.contentguard-lab .cg-art span {
+    font-size: 35px;
+    letter-spacing: -.05em;
+    font-weight: 800;
+    z-index: 1;
+    color: #234eaf;
+}
+.contentguard-lab .cg-reading h2 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 18px;
+    letter-spacing: -.02em;
+}
+.contentguard-lab .cg-reading p {
+    font-size: 15px;
+    color: #46586f;
+    line-height: 1.8;
+}
+.contentguard-lab .cg-reading blockquote {
+    border-left: 3px solid #7ca0f3;
+    margin: 24px 0 0;
+    padding: 4px 0 4px 16px;
+    color: #2d4771;
+    font-size: 15px;
+    line-height: 1.65;
+}
+.contentguard-lab .cg-side {
+    display: grid;
+    gap: 20px;
+}
+.contentguard-lab .cg-panel {
+    padding: 24px;
+}
+.contentguard-lab .cg-panel h2 {
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0 0 17px;
+}
+.contentguard-lab .cg-status-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.contentguard-lab .cg-status-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    font-size: 13px;
+    padding: 11px 0;
+    border-top: 1px solid var(--cg-line);
+}
+.contentguard-lab .cg-status-list li:first-child {
+    border-top: 0;
+    padding-top: 0;
+}
+.contentguard-lab .cg-state {
+    color: #23604d;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: 4px 7px;
+    background: #eaf7f0;
+}
+.contentguard-lab .cg-state.cg-off {
+    color: #63758b;
+    background: #f0f3f7;
+}
+.contentguard-lab .cg-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 0 0 17px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #53667e;
+}
+.contentguard-lab .cg-step-number {
+    flex: 0 0 24px;
+    height: 24px;
+    border-radius: 7px;
+    background: #eef3fd;
+    text-align: center;
+    color: #326ce5;
+    font-weight: 700;
+    line-height: 24px;
+}
+.contentguard-lab .cg-test {
+    margin-top: 24px;
+    padding: 24px;
+}
+.contentguard-lab .cg-test label {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.contentguard-lab .cg-test p,
+.contentguard-lab .cg-limit p {
+    color: var(--cg-muted);
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+.contentguard-lab .cg-test textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 12px 14px;
+    border: 1px solid #cbd6e3;
+    border-radius: 10px;
+    font: inherit;
+    font-size: 14px;
+    resize: vertical;
+}
+.contentguard-lab .cg-test textarea:focus {
+    outline: 2px solid #8aacf8;
+    outline-offset: 2px;
+}
+.contentguard-lab .cg-limit {
+    border: 1px solid #e6dfcd;
+    background: #fffcf4;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-top: 24px;
+}
+.contentguard-lab .cg-limit strong {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #76623c;
+}
+.contentguard-lab .cg-limit p:last-child {
+    margin-bottom: 0;
+}
+.contentguard-lab .cg-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 12px;
+    color: var(--cg-muted);
+    margin-top: 22px;
+}
+@media (max-width: 850px) {
+    .contentguard-lab .cg-grid {
+        grid-template-columns: 1fr;
+    }
+    .contentguard-lab .cg-hero {
+        display: block;
+    }
+    .contentguard-lab .cg-badge {
+        margin-top: 18px;
+    }
+    .contentguard-lab .cg-reading {
+        padding: 24px;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .contentguard-lab * {
+        scroll-behavior: auto;
+    }
+}
