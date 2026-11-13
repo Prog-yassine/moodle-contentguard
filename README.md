@@ -1,4 +1,6 @@
-# ContentGuard — laboratoire Moodle
+# moodle-contentguard
+
+ContentGuard — laboratoire Moodle.
 
 Source du plugin Moodle ContentGuard et de son environnement Docker de démonstration. Lancer `./start.sh` pour générer les identifiants locaux et préparer Moodle. Les fichiers `runtime/`, `artifacts/` et `.env` sont créés localement et exclus du dépôt Git ; les résultats et captures référencés ci-dessous sont des fichiers générés. L’hébergement temporaire de la conversation n’est pas inclus dans ce dépôt.
 
